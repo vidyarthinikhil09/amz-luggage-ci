@@ -157,7 +157,7 @@ def extract_asin_cards(soup: BeautifulSoup) -> Iterable[dict]:
 
         review_count = _extract_review_count(card)
 
-        # Price shown on listing is best-effort
+        # Extract price from listing
         price_el = card.select_one("span.a-price span.a-offscreen")
         price = parse_inr(price_el.get_text(" ", strip=True) if price_el else None)
 

@@ -176,7 +176,7 @@ def _add_winner_loser_cols(df: pd.DataFrame) -> pd.DataFrame:
     """Add table-friendly winner/loser callouts per metric.
 
     This makes leaders/laggards visible *inside* the comparison table
-    without relying on color styling (keeps it robust across themes).
+    without relying on color styling (theme-compatible).
     """
     if df is None or df.empty:
         return df

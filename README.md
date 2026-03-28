@@ -20,7 +20,7 @@ Interactive dashboard that scrapes Amazon India listings + reviews for 6 luggage
 3. Copy env template:
    - `copy .env.example .env`
     - Fill LLM settings if using LLM themes/aspects.
-       - OpenRouter (your setup): set `OPENROUTER_API_KEY` and (optionally) `OPENROUTER_SITE_URL` + `OPENROUTER_APP_NAME`.
+       - OpenRouter: set `OPENROUTER_API_KEY` and (optionally) `OPENROUTER_SITE_URL` + `OPENROUTER_APP_NAME`.
           - Default model in `.env.example` is `nvidia/nemotron-3-super-120b-a12b:free`.
        - Or use any OpenAI-compatible endpoint by setting `OPENAI_API_KEY`, `OPENAI_BASE_URL`, `OPENAI_MODEL`.
    - Optional: set `MAX_LLM_REVIEWS` to control LLM cost/time (cached results are reused).
@@ -49,7 +49,7 @@ Run these commands in order (PowerShell from the repo root):
 - Competitive intelligence: value-for-money index, discount reliance, anomaly flags, and light trust signals.
 
 ## Architecture
-This project is intentionally split into two modes:
+This project runs in two modes:
 - Mode A (local pipeline): scrape + analyze to produce/update `data/processed/*`.
 - Mode B (deployed app): Streamlit reads `data/processed/*` (no live Amazon scraping), so demos are stable.
 
