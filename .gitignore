@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+*.pkl
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Secrets
+.env
+
+# Streamlit
+.streamlit/
+
+# Data artifacts
+# Keep cleaned outputs for submission, but ignore raw HTML snapshots and LLM cache
+/data/raw/
+/data/processed/llm_cache/
+
+# Logs
+*.log
